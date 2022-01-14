@@ -13,7 +13,7 @@ import MyBooleanField from "./MyBooleanField";
 
 const UserFilter = (props) => (
   <Filter {...props}>
-    <SearchInput placeholder="Search by name or email" source="email" resettable alwaysOn />
+    <SearchInput placeholder="Search by email" source="name" resettable alwaysOn />
   </Filter>
 );
 

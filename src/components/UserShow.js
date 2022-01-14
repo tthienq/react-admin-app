@@ -8,7 +8,7 @@ import {
 } from 'react-admin';
 import MyBooleanField from './MyBooleanField';
 import MyTextField from './MyTextField';
-import PostShowActions from './UserShowActions';
+import PostShowActions from './EditShowActions';
 
 const UserShow = (props) => {
     console.log('Usershow: ', props);
