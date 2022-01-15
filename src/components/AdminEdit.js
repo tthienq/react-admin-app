@@ -1,20 +1,19 @@
 import React from 'react';
 import { DateInput, Edit, SimpleForm, TextInput } from 'react-admin';
 
-const ClassEdit = (props) => {
+
+const AdminEdit = (props) => {
     console.log(props);
     return (
-        <Edit title={'Edit User'} {...props} undoable={false}>
+        <Edit title={'Edit Admin'} {...props} undoable={false}>
             <SimpleForm>
                 <TextInput disabled source={'id'} />
                 <TextInput source={'name'} />
-                <TextInput source={'desc'} />
-                <TextInput source={'topic'} />
-                <TextInput source={'room'} />
+                <TextInput disabled source={'email'} />
                 <DateInput disabled source={'createdAt'} />
             </SimpleForm>
         </Edit>
     );
 };
 
-export default ClassEdit;
+export default AdminEdit;

@@ -3,13 +3,16 @@ import { Admin, fetchUtils, Resource } from 'react-admin'
 //import { authProvider } from './Auth';
 import restProvider from 'ra-data-simple-rest';
 import { VerifiedUserRounded, ViewListRounded, GroupRounded } from '@material-ui/icons';
+import HomePage from './components/HomePage';
 import UserList from './components/UserList';
 import UserEdit from './components/UserEdit';
 import UserShow from './components/UserShow';
 import ClassShow from './components/ClassShow/ClassShow';
 import ClassList from './components/ClassList';
 import ClassEdit from './components/ClassEdit';
-import HomePage from './components/HomePage';
+import AdminList from './components/AdminList';
+import AdminShow from './components/AdminShow';
+import AdminEdit from './components/AdminEdit';
 
 const httpClient = (url, options = {}) => {
   if (!options.headers) {
@@ -27,8 +30,9 @@ function App() {
     >
       <Resource
         name='admins'
-        show={ClassShow}
-        list={ClassList}
+        show={AdminShow}
+        list={AdminList}
+        edit={AdminEdit}
         icon={VerifiedUserRounded}
       />
       <Resource
