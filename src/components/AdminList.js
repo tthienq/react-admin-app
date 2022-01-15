@@ -7,6 +7,7 @@ import {
   SearchInput,
   // DeleteWithConfirmButton,
   EditButton,
+  EmailField
 } from "react-admin";
 
 
@@ -23,7 +24,7 @@ function AdminList(props) {
       <Datagrid rowClick={'show'}>
         <TextField source="id" />
         <TextField source="name" />
-        <TextField source="email" />
+        <EmailField source="email" />
         <EditButton basePath="/admins" />
         {/* <DeleteWithConfirmButton basePath="/admins" /> */}
       </Datagrid>

@@ -7,6 +7,7 @@ import {
   SearchInput,
   DeleteWithConfirmButton,
   EditButton,
+  EmailField
 } from "react-admin";
 
 import MyBooleanField from "./MyBooleanField";
@@ -25,7 +26,7 @@ function UserList(props) {
         <TextField source="id" />
         <TextField source="name" />
         <TextField source="fullname" />
-        <TextField source="email" />
+        <EmailField source="email" />
         <TextField source="studentID" />
         <MyBooleanField label="Active" source="status" />
         <EditButton basePath="/users" />

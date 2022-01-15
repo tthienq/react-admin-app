@@ -5,6 +5,7 @@ import {
     Tab,
     TabbedShowLayout,
     TextField,
+    EmailField
 } from 'react-admin';
 import MyBooleanField from './MyBooleanField';
 import MyTextField from './MyTextField';
@@ -19,7 +20,7 @@ const UserShow = (props) => {
                     <TextField source="id"/>
                     <TextField source="name" />
                     <TextField source="fullname" />
-                    <TextField source="email" />
+                    <EmailField source="email" />
                     <TextField label="StudentID" source="studentID" />
                     <DateField label="Created at" source="createdAt" showTime={true} />
                     <DateField label="Updated at" source="updatedAt" showTime={true} />

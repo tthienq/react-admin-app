@@ -6,10 +6,10 @@ export const axiosAdmin = axios.create({
 
 axiosAdmin.interceptors.request.use(
     (request) => {
-        //const token = localStorage.getItem('adminToken');
-        // if (token) {
-        //     request.headers['Authorization'] = 'Bearer ' + token;
-        // }
+        const token = localStorage.getItem('adminToken');
+        if (token) {
+            request.headers['Authorization'] = 'Bearer ' + token;
+        }
         return request;
     },
     (error) => {
