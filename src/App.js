@@ -12,6 +12,7 @@ import ClassEdit from './components/ClassEdit';
 import AdminList from './components/AdminList';
 import AdminShow from './components/AdminShow';
 import AdminEdit from './components/AdminEdit';
+import AdminCreate from './components/AdminCreate'
 
 import {axiosAdmin} from './api/axiosAdmin'
 
@@ -51,8 +52,8 @@ const authProvider = {
               const { id, fullname, avatar } = JSON.parse(
                   localStorage.getItem('adminInfo'),
               );
-              console.log({ id, fullname, avatar } )
-              return Promise.resolve({ id, fullname, avatar });
+              console.log({ id, fullName: fullname, avatar } )
+              return Promise.resolve({ id, fullName: fullname, avatar });
           }
           return Promise.resolve();
       } catch (error) {
@@ -83,6 +84,7 @@ function App() {
         show={AdminShow}
         list={AdminList}
         edit={AdminEdit}
+        create={AdminCreate}
         icon={VerifiedUserRounded}
       />
       <Resource
